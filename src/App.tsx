@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route, Link, useNavigate, useParams } from 'react-router-dom';
-import { Search, MapPin, Store, TrendingUp, Calendar, Users, BarChart3, Plus, Menu, X, ChevronRight, Star, Clock, Shield, Truck, AlertCircle, Eye, Filter, ArrowRight, Phone, MessageCircle, Globe, Leaf, ShoppingBag, Package, Map, List } from 'lucide-react';
+import { HashRouter, Routes, Route, Link, useNavigate, useParams } from 'react-router-dom';
+import { Search, MapPin, Store, TrendingUp, Calendar, Users, BarChart3, Plus, Menu, X, ChevronRight, Clock, Shield, Truck, AlertCircle, Eye, Filter, ArrowRight, Phone, MessageCircle, Globe, Leaf, ShoppingBag, Package, Map, List } from 'lucide-react';
 import { markets } from './data/markets';
 import { products, priceRanges, productCategories } from './data/products';
 import type { Market, MarketActivity, PriceFreshness } from './types';
@@ -1508,7 +1508,7 @@ function MarketsListPage() {
 // =================== APP ===================
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen bg-gray-50 flex flex-col">
         <Header />
         <main className="flex-1">
@@ -1526,7 +1526,7 @@ function App() {
         </main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
